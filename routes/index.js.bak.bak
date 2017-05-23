@@ -1,0 +1,98 @@
+var express = require('express');
+var router = express.Router();
+var http = require('http');
+var app = express();
+
+var list_options = {
+       // hostname:'https://javadaytomcatapplication-gse00011010.apaas.em3.oraclecloud.com/',
+	//hostname:'javadaytomcatapplication-gse00011010.apaas.em3.oraclecloud.com',
+	 hostname:'10.182.235.210',
+        port:8080,
+        path:'javaDayTokyo/list/',
+        method:'GET'
+}
+
+
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+router.get('/list', function(req, res, next) {
+// res.render('index', { title: 'Expresspppppppppppp' });
+	 var subreq = http.request(list_options,function(subres){
+        	 var json='';
+	         subres.on('data',function(data) {
+        	      json+=data;
+              	      console.log("data" + data);
+	         });
+        	 subres.on('end',function() {
+             	      console.log("json" + json);
+	             res.send(json);
+        	 });
+          });
+          subreq.on('error',function(err){
+               console.log("error" + err);
+               res.send(err);
+          });
+          subreq.end();
+
+});
+
+router.get('/list/:type', function(req, res, next) {
+ //res.render('index', { title: 'Expresspppppppppppp' });
+var list_type_options = {
+        hostname:'https://javadaytomcatapplication-gse00011010.apaas.em3.oraclecloud.com',
+  //      port:443,
+        path:'/javaDayTokyo/list/' + req.params.type,
+        method:'GET'
+}
+//res.send(list_type_options);
+	 var subreq = http.request(list_type_options,function(subres){
+        	 var json='';
+	         subres.on('data',function(data) {
+        	      json+=data;
+              	      console.log("data" + data);
+	         });
+        	 subres.on('end',function() {
+             	      console.log("json" + json);
+	             res.send(json);
+        	 });
+          });
+          subreq.on('error',function(err){
+               console.log("error" + err);
+               res.send(err);
+          });
+          subreq.end();
+
+});
+
+router.get('/service/:name', function(req, res, next) {
+ //res.render('index', { title: 'Expresspppppppppppp' });
+var list_type_options = {
+        hostname:'https://javadaytomcatapplication-gse00011010.apaas.em3.oraclecloud.com',
+    //    port:443,
+        path:'/javaDayTokyo/service/' + req.params.name,
+        method:'GET'
+}
+//res.send(list_type_options);
+	 var subreq = http.request(list_type_options,function(subres){
+        	 var json='';
+	         subres.on('data',function(data) {
+        	      json+=data;
+              	      console.log("data" + data);
+	         });
+        	 subres.on('end',function() {
+             	      console.log("json" + json);
+	             res.send(json);
+        	 });
+          });
+          subreq.on('error',function(err){
+               console.log("error" + err);
+               res.send(err);
+          });
+          subreq.end();
+
+});
+module.exports = router;

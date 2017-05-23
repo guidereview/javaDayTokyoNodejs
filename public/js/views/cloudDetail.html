@@ -1,0 +1,54 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<div class="oj-flex oj-flex-items-pad d_div" data-bind="attr: {style:d_Type_bg}">
+    <div class="oj-sm-12 oj-md-4 oj-flex-item text_right"  data-bind="attr: {style:smScreen()? 'text-align: center;' : 'text-align: right;padding-right:30px;'}">    
+        <img role="img" class="cloud-logo-icon" data-bind="attr: {src: d_icon}"/>
+       </div>
+    <div class="oj-sm-12 oj-md-8 oj-flex-item">
+        <div data-bind="text: d_Type,attr: {class:smScreen()? 'd_hide' : 'd_show d_Type_Style'}">
+            IaaS
+        </div>
+        <div class="d_Name" data-bind="text: d_Name,attr: {class:smScreen()? 'sm_d_Name' : 'd_Name'}">
+            Global Human Resource Cloud
+        </div>
+    </div>
+</div>
+
+<div style="padding: 20px;">
+    <p style="font-size: 1.4em;font-weight: 600">
+        Description
+    </p>
+    <p data-bind="text:d_desc">
+        Use a single global human resources solution to engage your employees, align common HR processes, and promote a culture of compliance. Watch the video to see how Pearson uses Oracle Global HR.
+    </p>
+    <p style="font-size: 1.4em;font-weight: 600">
+        Pricing
+    </p>
+    <div>
+        <span style="margin: 5px 0px 5px 5px;">$</span>
+        <span data-bind="text: d_money">13.00</span>
+        <span data-bind="text: d_metric"> employee / month</span>
+    </div>
+
+</div>
+<div class="oj-flex oj-flex-items-pad small_margin">
+        <div class="oj-sm-4 oj-md-4 oj-lg-4 oj-flex-item">    
+            <button id="buttonIcon2" class="dt_btnleft detail_btn_style"
+                    data-bind="click: backtoHome, ojComponent: {
+                    component:'ojButton', 
+                    icons: {start:'oj-fwk-icon-back oj-fwk-icon'}, 
+                    label: 'Back'
+                }"></button>
+        </div>
+        <div class="oj-sm-8 oj-md-8 oj-lg-8 oj-flex-item text_on_right"> 
+            <button id= "button2" class="dt_btnleft detail_btn_style dt_right_btn"
+                    data-bind="attr: {style:d_Type_bg},click: goonline, 
+                       ojComponent: { icons:{end:'oj-fwk-icon-next oj-fwk-icon'},component: 'ojButton', label:smScreen()? 'Go to oracle.cloud.com':'Check more details on  oracle.cloud.com' }"></button>
+
+        </div>
+    </div>

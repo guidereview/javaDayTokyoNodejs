@@ -1,0 +1,240 @@
+/*
+    Document   : override
+    Created on : <date>
+    Author     : <author>
+    Description:
+        This is where any of your application specific styles should be included
+*/
+.or-menu{
+    background: rgb(242, 244, 245);
+}
+
+
+.demo-logo-icon{
+    width: 140px;
+    margin: 0 auto;
+    padding-right: 50px;
+    content:url("images/oracle_logo.png")}
+
+.centerIt{
+    text-align: center;
+}
+
+.integrated-logo-icon{
+    margin: 0 auto;
+    content:url("images/integratedCloud.png")}
+
+.cloud-logo-icon{
+    margin: 0 auto;
+    margin-top: 13px;
+}
+
+.poco-logo-icon{
+    margin: 0 auto;
+    margin-top: 30px;
+    content:url("images/Poco_logo.png")}
+
+
+.oj-contrast-marker .oj-navigationlist-vertical .oj-navigationlist-item.oj-selected {
+    background-color: #e4f0fa;
+}
+
+.oj-contrast-marker a.oj-navigationlist-item-content .oj-navigationlist-item-label {
+    color: black;
+}
+
+.oj-contrast-marker .oj-selected>a.oj-navigationlist-item-content>.oj-navigationlist-item-label {
+    color: rgb(0,124,168);
+}
+
+.oj-web-applayout-max-width {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 2440px;
+    box-sizing: border-box;
+}
+
+.homeTitle{
+    font-size: 2.3em;
+    font-weight: bold;
+    padding-top: 35px;
+}
+
+P{
+    margin: 5px 0px 5px 5px;
+    text-align: left;
+}
+
+.home_font1{
+    font-weight: 600;
+}
+
+.small_margin{
+    margin: 10px 0px 10px 0px;
+}
+
+.text_right{
+    text-align: right;
+}
+
+.text_left{
+    text-align: left;
+    height: 100%;
+    margin: auto;
+    line-height: inherit;
+    padding-left: 10px;
+}
+
+.text_on_right{
+    text-align: right;
+}
+
+.text_right_sm{
+    text-align: center;
+}
+
+.text_left_sm{
+    font-size: 1.5em;
+    text-align: center;
+    height: inherit;
+    margin: auto;
+    line-height: inherit;
+}
+
+.homeTitle_sm{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+
+
+.IaaS_bg{
+    width: 100%;height: 100px;background: rgb(0,124,168);margin: 10px 0px 0px 0px;border: 1px solid rgb(0,124,168)
+        ;
+}
+
+.IaaS_words{
+    width: 100%;height: 60px;background: transparent;border: 1px solid rgb(0,124,168)
+        ;
+}
+
+.SaaS_bg{
+    width: 100%;height: 100px;background: rgb(0,129,147);margin: 10px 0px 0px 0px;border: 1px solid rgb(0,129,147)
+
+}
+
+.SaaS_words{
+    width: 100%;height: 60px;background: transparent;border: 1px solid rgb(0,129,147)
+
+}
+
+.PaaS_bg{
+    width: 100%;height: 100px;background: rgb(34,130,114);margin: 10px 0px 0px 0px;border: 1px solid rgb(34,130,114)
+}
+
+
+.PaaS_words{
+    width: 100%;height: 60px;background: transparent;border: 1px solid rgb(34,130,114)
+
+}
+
+.d_div{
+    color: white;
+    padding-top: 24px;
+}
+
+.d_Type_Style{
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+
+.c_Type_Style{
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+
+.d_Name{
+    font-size: 2.0em;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.sm_d_Name{
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.d_hide{
+    display: none;
+}
+
+.d_show{
+    display: block;
+}
+
+.home_logo_style{
+    margin-top: 10px;
+    height: 100px;
+}
+
+.oj-web-applayout-content {
+
+    padding: 0px;
+}
+
+.dt_btnleft{
+    font-size: 0.5em;
+    color: white;
+}
+
+.dt_btnright{
+    padding-left: 0px;font-size: 0.5em;
+}
+.detail_btn_style{
+    border: none;
+    width: 90%;
+    border-radius: 16px;
+}
+
+.dt_right_btn{
+    color: white !important;
+}
+
+#button2 .oj-end{
+    color: white;
+}
+
+
+.oj-listview-card-layout li.oj-listview-item {
+    width: 240px;
+    height: auto;
+    border: none;
+    border-radius: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0 !important;
+    margin-right: 0px !important;
+    background-size: 0;
+    box-sizing: border-box;
+}
+
+.oj-listview-container {
+    border:none;
+}
+
+.oj-button-text{
+    font-size: 1.8em;
+}
+
+.errorText{
+    margin-top: 30px;
+    display:none;
+    color: darkgray;
+}

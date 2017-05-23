@@ -1,0 +1,53 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+
+<div id="SaaSContent" class="oj-web-applayout-max-width centerIt">
+
+    <div class="oj-flex oj-flex-items-pad small_margin">
+        <div class="oj-sm-12 oj-md-4  oj-lg-4 oj-flex-item"  data-bind="attr: {style:'text-align: center;'}">    
+             <img role="img" class="poco-logo-icon home_logo_style" src="css/images/Poco_logo.png" />
+            </div>
+        <div class="oj-sm-12 oj-md-8 oj-lg-8 oj-flex-item">    
+            <div class="homeTitle text_left" data-bind="attr: {class:smScreen()? 'homeTitle_sm text_left_sm' : 'homeTitle text_left'}">
+                Oracle Cloud Service Catalog
+            </div></div>
+    </div>
+
+    <input id="inputSearch_S" placeholder="Search..."
+           data-bind="ojComponent: {
+          component: 'ojInputSearch',
+          optionChange: valueChangeHandler,
+          value: keyword,
+          options: tags,
+          rootAttributes: {style:'max-width: 90%;border: 1px solid gray; border-radius: 20px;padding: 2px 12px 2px 12px;'}}">
+
+    <!--    <ul id="cloudgrid" class="oj-flex oj-flex-items-pad" aria-label="" 
+             data-bind="ojComponent: {component: 'ojListView', data: dataBase, item: {template: 'cloudItemTemplate'}, selection: selectedItems,selectionMode: 'single',optionChange: logSelected}">
+        </ul>-->
+    <p id="SaasError" class="centerIt errorText">No result found. Please input a valid search keywords</p>
+    
+    <ul id="cloudgrid_S" class="oj-listview-card-layout" aria-label="list with card layout for items in group" 
+        data-bind="ojComponent: {component: 'ojListView', data: dbSource, optionChange: logSelected, item: {template: 'cloudItemTemplate_S'}, drillMode: 'none'}">
+    </ul>
+
+    <script type="text/html" id="cloudItemTemplate_S">
+
+        
+     <li class="oj-sm-12 oj-md-4 oj-flex-item"  data-bind="attr: {id: id}">
+                <div class="SaaS_bg"  data-bind="attr: { style: color}">
+                    <img class="cloud-logo-icon"
+                         data-bind="attr: {src: icon}"/>
+                </div>
+                <div class="SaaS_words">
+                    <p data-bind="text: type">IaaS</p>
+                    <p class="home_font1" data-bind="text: name">Global Human Resource Cloud</p>
+                </div>
+            </li>
+    </script>
+
+</div>
